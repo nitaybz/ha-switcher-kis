@@ -1,0 +1,30 @@
+"""Constants for the Switcher integration."""
+
+DOMAIN = "switcher_kis"
+
+API_CONTROL_BREEZE_DEVICE = "control_breeze_device"
+
+DISCOVERY_TIME_SEC = 12
+
+SIGNAL_DEVICE_ADD = "switcher_device_add"
+
+# Services
+CONF_AUTO_OFF = "auto_off"
+CONF_TIMER_MINUTES = "timer_minutes"
+SERVICE_SET_AUTO_OFF_NAME = "set_auto_off"
+SERVICE_TURN_ON_WITH_TIMER_NAME = "turn_on_with_timer"
+
+# Defines the maximum interval device must send an update before it marked unavailable
+MAX_UPDATE_INTERVAL_SEC = 30
+
+# When a device stops broadcasting, poll it over TCP before marking it
+# unavailable, so a lost broadcast alone does not take a reachable device down.
+POLL_TIMEOUT_SEC = 8
+
+# When no device has broadcast for this long the udp listener is assumed wedged
+# and is rebuilt in place by the watchdog.
+LISTENER_WATCHDOG_SILENCE_SEC = 120
+
+PREREQUISITES_URL = (
+    "https://www.home-assistant.io/integrations/switcher_kis/#prerequisites"
+)
